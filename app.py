@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+# from sklearn.feature_extraction.text import TfidfVectorizer
+# from sklearn.metrics.pairwise import cosine_similarity
 # laoding models
 df = pickle.load(open('df.pkl','rb'))
 tfidvector = TfidfVectorizer(analyzer='word',stop_words='english')
