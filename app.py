@@ -4,8 +4,10 @@ import pickle
 import streamlit as st
 # laoding models
 df = pickle.load(open('df.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
-
+tfidvector = TfidfVectorizer(analyzer='word',stop_words='english')
+matrix = tfidvector.fit_transform(df['text'])
+similarity = cosine_similarity(matrix)
+ 
 
 def recommendation(song_df):
     idx = df[df['song'] == song_df].index[0]
