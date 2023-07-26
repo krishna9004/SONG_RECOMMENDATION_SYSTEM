@@ -29,7 +29,7 @@ option = st.selectbox(
 
 if st.button('Recommend Me'):
      st.write('songs Recomended for you are:')
-     # st.write(movie_recommend(option),show_url(option))
+     # st.write(song_recommend(option),show_url(option))
      df = pd.DataFrame({
           'song Recommended': recommendation(option),
      })
